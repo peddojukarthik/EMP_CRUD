@@ -15,7 +15,7 @@ A simple web-based CRUD application for managing employee data using Java Servle
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - *Frontend*: HTML, CSS, JavaScript
 - *Backend*: Java Servlets, JDBC
