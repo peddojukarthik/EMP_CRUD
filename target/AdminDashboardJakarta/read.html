@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Employees</title>
+</head>
+<body>
+    <h2>Employee List</h2>
+    <div id="emp-table">Loading...</div>
+
+    <script>
+        fetch('/AdminDashboardJakarta/view-employees')
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(data) {
+            document.getElementById('emp-table').innerHTML = data;
+        })
+        .catch(function(error) {
+            document.getElementById('emp-table').innerHTML = "Error loading employee list.";
+            console.error(error);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/jakartaee 
+                             http://xmlns.jcp.org/xml/ns/jakartaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>AdminDashboardApp</display-name>
+
+    <!-- Optional: welcome file -->
+    <welcome-file-list>
+        <welcome-file>ADMIN-LOGIN.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Only add servlet mapping here if you are not using annotations -->
+</web-app>

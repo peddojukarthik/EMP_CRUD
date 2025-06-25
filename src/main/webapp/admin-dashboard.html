@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { display: flex; height: 100vh; font-family: Arial, sans-serif; }
+        .sidebar {
+            width: 200px;
+            background-color: #2f3542;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #57606f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .sidebar button:hover {
+            background-color: #747d8c;
+        }
+        .main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f1f2f6;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="loadSection('create')">Create</button>
+        <button onclick="loadSection('read')">Read</button>
+        <button onclick="loadSection('update')">Update</button>
+        <button onclick="loadSection('delete')">Delete</button>
+    </div>
+    <div class="main" id="main-content">
+        <!-- default content (read) will load here -->
+        Loading employees...
+    </div>
+
+    <script>
+        function loadSection(section) {
+            fetch(section + ".html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('main-content').innerHTML = html;
+                });
+        }
+
+        // Load 'read' section by default
+        window.onload = () => loadSection('read');
+    </script>
+</body>
+</html>
